@@ -1,9 +1,23 @@
 <!doctype html>
 <html>
   <head>
-    <title>This is the title of the webpage!</title>
+    <title>CRUDyLeaf</title>
   </head>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <p>Build Spring Boot REST&nbsp;endpoints (APIs) by defining entities and CRUD operations. The grammar of this DSL automatically generates&nbsp;the Spring Boot REST files (application, entity, repository, service and controller classes, pom file, etc.).&nbsp;Once generated the files (under src-gen folder), you can run the project (structured as a Maven project) either using&nbsp;a command-line&nbsp;console&nbsp;(with the command: <code>mvn spring-boot:run</code>)&nbsp;or importing the Maven project&nbsp;using a&nbsp;Java IDE.</p>
+
+<p>Once installed this&nbsp;plugin, open a new project (generic project), new file (remember&nbsp;to use the .g2 as extension file). Select yes in case a window prompts you to convert the project to an Xtext project, this in order to generate the code each time you save the&nbsp;source&nbsp;file (.g2 file).&nbsp;</p>
+
+<p>Click in <a href="http://osgg.net/crudyleaf/crudyleaf_grammar.png" target="_blank">this link</a>&nbsp;to see an example of the language&nbsp;grammar.</p>
+
+<p><img src="http://osgg.net/crudyleaf/crudyleaf_grammar.png" /></p>
+
+<p>This example will produce the corresponding Spring Boot Java files such as: <code>Car.java</code> (entity), <code>CarRepository.java</code>, <code>CarService.java</code>, <code>CarController.java</code>, <code>Order.java</code>, <code>OrderRepository.java</code>, <code>OrderService.java</code>, <code>OrderController.java</code>, also the main file <code>DemoAppApplication.java</code> and the maven pom file <code>pom.xml</code>. The CRUD operations specified in the entities are exposed as REST services (<code>CarController.java</code> and <code>OrderController.java</code>). By&nbsp;default, the H2 database is used, but you can change it in the <code>application.properties</code> file. Data&nbsp;types supported are Long, UUID, String, Integer, Double, Boolean, Date and Time. An entity property can be filtered only by data types String and Date. CRUDyLeaf will generate the corresponding endpoints for searching in the filtered properties. Date and Time data types can automatically generate values each a successful post is requested. Concerning&nbsp;the time zone, it is possible to define any available from&nbsp;<code>TimeZone.getAvailableIDs()</code>.&nbsp;A complete list of&nbsp;available time zones&nbsp;is discussed in&nbsp;<a href="https://docs.oracle.com/javase/tutorial/datetime/iso/timezones.html" target="_blank">this link</a>.</p>
+
+<p>(updated, version 1.1) The endpoints generated&nbsp;are documented using OpenAPI&nbsp;and Swagger. By&nbsp;default, you can access to this information once the Spring Boot application is run, accessing&nbsp;the following resource:&nbsp;/api-doc.html, however it is possible to change this resource name in the&nbsp;<code>application.properties</code>&nbsp;file.</p>
+
+<p>You can import the resulting spring boot project through&nbsp;a java&nbsp;IDE or running it with the mvn command, <code>mvn spring-boot:run</code></p>
+
+<p>The plugin can be manually installed from the URL: <code>http://osgg.net/crudyleaf</code></p>
   </body>
 </html>
